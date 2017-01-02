@@ -1,11 +1,22 @@
 class ScoresController < ApplicationController
 
   def index
-    render json: {"scores" => "ALL THE SCORES"}
+    @scores = Score.all
+    render json: @scores
   end
 
   def create
-    render json: {"scores" => "WOW A NEW SCORE"}
+    @score = Score.new(score_params)
+
+    @score.save
+
+    render json: @score
   end
+
+  private
+
+    def score_params
+      params.require(:score).permit(:name, :attempts, :time)
+    end
 
 end

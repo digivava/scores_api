@@ -1,7 +1,7 @@
 class ScoresController < ApplicationController
 
   def index
-    @scores = Score.all.order(params[:sort]).limit(10)
+    @scores = Score.all.order(params[:sort], :created_at).limit(10)
     render json: @scores
   end
 

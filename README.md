@@ -1,24 +1,15 @@
-# README
+# Scores API #
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This API was built to work in conjunction with a card-flipping memory game.
 
-Things you may want to cover:
 
-* Ruby version
+## How To Run
+To get this application running on localhost, just follow these steps:
 
-* System dependencies
+1. Clone the repo and do `$ cd scores_api`
 
-* Configuration
+2. `$ bundle`
 
-* Database creation
+3. `$ bin/rails db:setup`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. `$ bin/rails server` This should run the server locally on port 3000.
